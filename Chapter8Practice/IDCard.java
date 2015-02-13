@@ -1,7 +1,6 @@
 
 public class IDCard extends Card
 {
-    /** description of instance variable x (add comment for each instance variable) */
     private String idNumber;
     
     public IDCard(String n, String id)
@@ -12,8 +11,31 @@ public class IDCard extends Card
 
     public String format()
     {
-        return super.format();
+        return super.format() + "\n" + idNumber;
+       
     }
+    
+    public String toString()
+    {
+        String str = "IDCard[";
+        str += "name=" + super.getName() + "]";
+        str += "[number =" + idNumber + "]";
+        
+        return str;
+    }
+    
+    public boolean equals(Object otherObject)
+    {
+        if(this.getClass() == otherObject.getClass())
+        {          
+            IDCard other = (IDCard) otherObject;
+            return this.getName().equals(other.getName())
+                && this.idNumber.equals(other.idNumber);
+            
+        }
+       return false;
+    }
+    
     
 
 }

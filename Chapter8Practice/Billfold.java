@@ -41,5 +41,19 @@ public class Billfold
         
         return cards;
     }
+    
+    public int getExpiredCardCount()
+    {
+        int expiredCards = 0;
+        if(card1.isExpired())
+        {
+            expiredCards++;
+        }
+        if(card2.isExpired())
+        {
+            expiredCards++;
+        }
+        return expiredCards;
+    }
 
 }

@@ -38,5 +38,26 @@ public class Card
     {
         return "Card holder: " + name;
     }
+    
+    public String toString()
+    {
+        String str = "Card";
+        str += "[name =" + name + "]";
+        
+        return str;
+    }
+    
+    public boolean equals(Object otherObject)
+    {
+       if(this.getClass() == otherObject.getClass())
+        {          
+            Card other = (Card) otherObject;
+            return this.name.equals(other.name);
+            
+        }
+       return false;
+    }
+    
+   
 
 }

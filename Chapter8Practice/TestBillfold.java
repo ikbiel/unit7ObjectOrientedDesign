@@ -1,5 +1,5 @@
 
-public class TestCards
+public class TestBillfold
 {
     public static void main(String[] args)
     {
