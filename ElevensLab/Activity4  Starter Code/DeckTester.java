@@ -54,7 +54,7 @@ public class DeckTester {
         String[] ranksI = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
         String[] suitsI = {"Hearts", "Diamonds", "Clubs", "Spades"};
         int[] pointValuesI = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 , 12, 13, 14};
-        Deck d1 = new deck(ranksI, suitsI, pointValuesI);
+        Deck d1 = new Deck(ranksI, suitsI, pointValuesI);
         System.out.println(d1.toString());
         d1.shuffle();
         System.out.println(d1.toString());

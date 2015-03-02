@@ -63,18 +63,17 @@ public class Deck {
 	 * and reset the size to represent the entire deck.
 	 */
 	public void shuffle() {
-		int preSize = size;
+		size = cards.size()-1;
 	    Random generator = new Random();
 		for( int k = cards.size()-1; k > 0; k-- )
 		{
 		    int r = generator.nextInt(k);
 	        Card temp = cards.get(k);
-	        cards.get(k) = cards.get(r);
-	        cards.get(r) = temp;
+	        cards.set(k, cards.get(r));
+	        cards.set(r, temp);
 		        
 		}
 		
-		size = preSize;
 	}
 
 	/**
